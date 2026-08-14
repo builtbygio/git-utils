@@ -75,7 +75,9 @@ static void git_chevron_register(
     void* priv) {
   Repository::Init(exports);
 }
-NODE_MODULE_CONTEXT_AWARE(git, git_chevron_register)NAN_METHOD(Repository::New) {
+NODE_MODULE_CONTEXT_AWARE(git, git_chevron_register)
+
+NAN_METHOD(Repository::New) {
   Nan::HandleScope scope;
   Repository* repository = new Repository(
     Local<String>::Cast(info[0]), Local<Boolean>::Cast(info[1]));
