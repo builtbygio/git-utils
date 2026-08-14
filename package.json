@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/builtbygio/git-utils/issues"
   },
-  "homepage": "http://atom.github.io/git-utils",
+  "homepage": "https://github.com/builtbygio/git-utils",
   "keywords": [
     "git",
     "libgit2",

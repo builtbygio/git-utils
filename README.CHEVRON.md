@@ -1,10 +1,9 @@
-# git-utils (Chevron fork)
+# git-utils (Chevron)
 
-Fork of the Atom-era native at `git-utils` version `5.7.1`.
+**Required export:** `open(repositoryPath, search = true)` returning a
+Repository or null (`src/git-repository.js`).
 
-Folded Electron 43 / V8 15 compile fixes that used to live in `script/lib/patch-*.js`:
-
-- `NODE_MODULE` → `NODE_MODULE_CONTEXT_AWARE`
-- V8 15 API removals (`GetIsolate`, `String::Write`, `WriteUtf8` capacity)
-- `nan@2.28.0`
-- oniguruma GCC 14 `gnu89` / spellchecker MSVC wstring bind, where applicable
+Repository methods used by Chevron include `getPath`, `getShortHead`,
+`getStatus`, `getWorkingDirectory`, `release`, submodule helpers.
+Native addon is `build/Release/git.node`. `deps/libgit2` is vendored
+(no submodule) so `--ignore-scripts` still compiles.
