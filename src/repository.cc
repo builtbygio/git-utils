@@ -68,9 +68,14 @@ void Repository::Init(Local<Object> target) {
             Nan::GetFunction(newTemplate).ToLocalChecked());
 }
 
-NODE_MODULE(git, Repository::Init)
-
-NAN_METHOD(Repository::New) {
+static void git_chevron_register(
+    v8::Local<v8::Object> exports,
+    v8::Local<v8::Value> module,
+    v8::Local<v8::Context> context,
+    void* priv) {
+  Repository::Init(exports);
+}
+NODE_MODULE_CONTEXT_AWARE(git, git_chevron_register)NAN_METHOD(Repository::New) {
   Nan::HandleScope scope;
   Repository* repository = new Repository(
     Local<String>::Cast(info[0]), Local<Boolean>::Cast(info[1]));
