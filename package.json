@@ -1,7 +1,7 @@
 {
   "name": "git-utils",
   "description": "A package for using Git repositories",
-  "version": "5.7.3",
+  "version": "5.7.1",
   "license": "MIT",
   "author": {
     "name": "Kevin Sawicki",
@@ -15,12 +15,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/atom/git-utils.git"
+    "url": "https://github.com/builtbygio/git-utils.git"
   },
   "bugs": {
-    "url": "https://github.com/atom/git-utils/issues"
+    "url": "https://github.com/builtbygio/git-utils/issues"
   },
-  "homepage": "http://atom.github.io/git-utils",
+  "homepage": "https://github.com/builtbygio/git-utils",
   "keywords": [
     "git",
     "libgit2",
@@ -36,12 +36,14 @@
     "wrench": "~1.4.4"
   },
   "dependencies": {
-    "fs-plus": "^3.0.0",
-    "nan": "^2.14.2"
+    "nan": "2.28.0",
+    "fs-plus": "^3.0.0"
   },
   "scripts": {
     "lint": "standard src spec",
-    "test": "jasmine-focused --captureExceptions spec",
-    "prepare": "git submodule update --init --recursive"
+    "test": "jasmine-focused --captureExceptions spec"
+  },
+  "engines": {
+    "chevron": "*"
   }
 }

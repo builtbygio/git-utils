@@ -1,5 +1,4 @@
-##### Atom and all repositories under Atom will be archived on December 15, 2022. Learn more in our [official announcement](https://github.blog/2022-06-08-sunsetting-atom/)
- # Git Node module [![CI](https://github.com/atom/git-utils/actions/workflows/ci.yml/badge.svg)](https://github.com/atom/git-utils/actions/workflows/ci.yml)
+# Git Node module [![Build Status](https://travis-ci.org/atom/git-utils.svg?branch=master)](https://travis-ci.org/atom/git-utils) [![Build status](https://ci.appveyor.com/api/projects/status/myrqbxes1mv8b472?svg=true)](https://ci.appveyor.com/project/Atom/git-utils)
 
 
 Helpers for working with Git repositories built natively on top of
